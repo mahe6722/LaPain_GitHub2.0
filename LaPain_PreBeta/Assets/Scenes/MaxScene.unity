@@ -2783,10 +2783,8 @@ MonoBehaviour:
   barrier: {fileID: 1099619910}
   uiSlider: {fileID: 1292129571}
   shieldSlider: {fileID: 1292129573}
-  cooldown_barrier: 1
+  cooldown_barrier: 0.1
   timer_cooldown_barrier: 3
-  duration_barrier: 3
-  timer_duration_barrier: 0
 --- !u!1 &2063925783
 GameObject:
   m_ObjectHideFlags: 0
