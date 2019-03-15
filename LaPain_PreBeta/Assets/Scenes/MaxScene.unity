@@ -180,6 +180,14 @@ Prefab:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1216937344138446, guid: b7e8c4e09ce29924da48d0e8b21e2375, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421744173074630, guid: b7e8c4e09ce29924da48d0e8b21e2375, type: 2}
+      propertyPath: m_TagString
+      value: Carrot
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 60451630179981150, guid: b7e8c4e09ce29924da48d0e8b21e2375, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b7e8c4e09ce29924da48d0e8b21e2375, type: 2}
