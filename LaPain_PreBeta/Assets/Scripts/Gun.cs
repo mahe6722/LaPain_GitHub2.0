@@ -46,7 +46,7 @@ public class Gun : MonoBehaviour
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
 
-                   
+                    Instantiate(MuzzleFlashPrefab);
             }
         }
         else
