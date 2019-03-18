@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 9e91f0b4b906c7a43b7b58e4e8c0c93b
   - enabled: 1
-    path: Assets/Scenes/MaxScene.unity
-    guid: 7eeb3b62f138cd047b75dd112dcc2c2b
+    path: Assets/Scenes/LudScene.unity
+    guid: f7f0cb7c854c44f4bb3e441e8285d9d9
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+    guid: a17546593b88c89439c341961fe7b215
   m_configObjects: {}

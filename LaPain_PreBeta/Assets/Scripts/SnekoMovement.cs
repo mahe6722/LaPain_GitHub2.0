@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class SnekoMovement : MonoBehaviour
 {
+    
+
     GameObject sneko;
 
     GameObject snekoHead;
 
     ManagerEnemy enemyManager;
+
+    public GameObject WinScreenPanel;
 
     public float snekoSpeed;
     public float retreatSpeed;
@@ -37,6 +41,8 @@ public class SnekoMovement : MonoBehaviour
 
     void Start ()
     {
+        WinScreenPanel.SetActive(false);
+
         currentSpeed = snekoSpeed;
         sneko = GameObject.Find("Sneko");
 
@@ -51,6 +57,7 @@ public class SnekoMovement : MonoBehaviour
         if (tempHealth <= 0)
         {
             sneko.SetActive(false);
+            WinScreenPanel.SetActive(true);
         }
 
 

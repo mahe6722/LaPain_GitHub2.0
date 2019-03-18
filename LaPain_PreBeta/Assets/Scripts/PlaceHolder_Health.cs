@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PlaceHolder_Health : MonoBehaviour {
 
     public int startingHealth = 100;
     public int currentHealth;
     public int actualHealth;
+
+    public GameObject GameOverPanel;
+    public Text gameOverText;
 
     //public Slider healthSlider;
     public Image enrageImage;
@@ -37,6 +41,8 @@ public class PlaceHolder_Health : MonoBehaviour {
         actualHealth = startingHealth + 50;
 
         healthBarStartColor = carrotHealthBar.color;
+
+        GameOverPanel.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -130,6 +136,7 @@ public class PlaceHolder_Health : MonoBehaviour {
             carrotHealthBar.enabled = false;
             //Call the Function that takes care of the Death of the Player
             Death();
+            
         }
     }
 
@@ -139,5 +146,7 @@ public class PlaceHolder_Health : MonoBehaviour {
         isDead = true;
         
         Destroy(gameObject);
+
+        GameOverPanel.SetActive(true);
     }
 }
