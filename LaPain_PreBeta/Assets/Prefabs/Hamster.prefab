@@ -414,8 +414,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hamsterSpeed: 4
+  laneID: 0
   frequency: 1
   hamsterLane1: {fileID: 0}
+  hamsterLane2: {fileID: 0}
 --- !u!114 &114965579601658368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -427,7 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07815f90177cd894786a99b5861d107c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 90
+  startingHealth: 60
   currentHealth: 0
 --- !u!212 &212209812416778770
 SpriteRenderer:

@@ -34,7 +34,7 @@ public class ExtendableArm : MonoBehaviour
 
         if (sneko != null)
         {
-            carrot = GameObject.Find("CarrotPlaceholder");
+            carrot = GameObject.Find("Carrot");
             invisibleCollider = GameObject.Find("InvisibleShield");
 
             snekoMovementScript = GameObject.Find("Sneko").GetComponent<SnekoMovement>();
