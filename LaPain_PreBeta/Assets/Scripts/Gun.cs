@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public Transform MuzzleFlashPrefab;
+    public GameObject MuzzleFlashPrefab;
     public float offset;
 
     public GameObject projectile;
@@ -21,11 +21,12 @@ public class Gun : MonoBehaviour
 
     void Effect ()
     {
-        Transform clone = (Transform)Instantiate(MuzzleFlashPrefab, shotPoint.position, shotPoint.rotation);
-        clone.parent = shotPoint;
-        float size = Random.Range(0.6f, 0.9f);
-        clone.localScale = new Vector3(size, size, size);
-        Destroy (clone.gameObject, 0.02f);
+        float size = Random.Range(0.2f, 0.3f);
+        MuzzleFlashPrefab.transform.localScale = new Vector3(size, size, size);
+
+        GameObject clone = (GameObject)Instantiate(MuzzleFlashPrefab, shotPoint.position, shotPoint.rotation);
+
+        Destroy (clone, 0.04f);
     }
 
     private void Update()
@@ -46,7 +47,7 @@ public class Gun : MonoBehaviour
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
 
-                    Instantiate(MuzzleFlashPrefab);
+                    Effect();
             }
         }
         else
