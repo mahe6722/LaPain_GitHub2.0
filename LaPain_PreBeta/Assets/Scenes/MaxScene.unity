@@ -1076,10 +1076,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1337457226891404, guid: f629f0dcb1000174b9f709cd30b43bc9, type: 2}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 114719370385626824, guid: f629f0dcb1000174b9f709cd30b43bc9,
         type: 2}
       propertyPath: GameOverPanel
@@ -1115,6 +1111,10 @@ Prefab:
       propertyPath: shieldSlider
       value: 
       objectReference: {fileID: 1292129573}
+    - target: {fileID: 1337457226891404, guid: f629f0dcb1000174b9f709cd30b43bc9, type: 2}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f629f0dcb1000174b9f709cd30b43bc9, type: 2}
   m_IsPrefabAsset: 0
