@@ -144,9 +144,11 @@ public class PlaceHolder_Health : MonoBehaviour {
     void Death ()
     {
         isDead = true;
-        
+
         Destroy(gameObject);
 
         GameOverPanel.SetActive(true);
+
+
     }
 }
