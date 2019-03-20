@@ -34,7 +34,7 @@ public class ExtendableArm : MonoBehaviour
 
         if (sneko != null)
         {
-            carrot = GameObject.Find("CarrotPlaceholder");
+            carrot = GameObject.Find("Carrot");
             invisibleCollider = GameObject.Find("InvisibleShield");
 
             snekoMovementScript = GameObject.Find("Sneko").GetComponent<SnekoMovement>();
@@ -53,7 +53,7 @@ public class ExtendableArm : MonoBehaviour
             RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance);
             if (hitInfo.collider != null)
             {
-                if (hitInfo.collider.CompareTag("NotCarrot"))
+                if (hitInfo.collider.CompareTag("NotCarrot") && snekoMovementScript.stageCounter < 3)
                 {
                     snekoMovementScript.direction = 1;
                     snekoMovementScript.currentBorder = borderReset;
@@ -66,7 +66,7 @@ public class ExtendableArm : MonoBehaviour
                     invisibleCollider.transform.position = invisibleCollider.transform.position + new Vector3(0.5f, 0, 0);
                     invisibleCollider.SetActive(false);
                 }
-                if (hitInfo.collider.CompareTag("Carrot") && carrot != null)
+                else if (hitInfo.collider.CompareTag("Carrot") && snekoMovementScript.stageCounter == 3 && carrot != null)
                 {
                     carrot.transform.parent = null;
                     carrot.transform.parent = gameObject.transform;

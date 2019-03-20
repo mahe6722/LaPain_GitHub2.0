@@ -8,6 +8,7 @@ public class HamsterShooting : MonoBehaviour {
     public Transform hamsterGun;
     public GameObject player;
     
+    
 
     public float timeBetweenBullets;
     public float timerFireRate;
@@ -15,6 +16,7 @@ public class HamsterShooting : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player = GameObject.Find("Player");
+        
 	}
 	
 	// Update is called once per frame
@@ -22,7 +24,7 @@ public class HamsterShooting : MonoBehaviour {
 
         timerFireRate += Time.deltaTime;
 
-        if (timerFireRate >= timeBetweenBullets && Time.timeScale != 0 && player != null) {
+        if (timerFireRate >= timeBetweenBullets && Time.timeScale != 0 && player != null && transform.parent.position.x < 6f) {
 
                 Shoot();           
         }
