@@ -21,7 +21,6 @@ public class DestroyByContact : MonoBehaviour {
             Destroy(gameObject);
 
             playerHealth.TakeDamage(damage);
-            
         }
 
         //Make sure that if the bullet collides with any other collider it should also destroy. 
