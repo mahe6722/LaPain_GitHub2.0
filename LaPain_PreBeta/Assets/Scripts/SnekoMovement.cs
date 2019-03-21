@@ -56,8 +56,9 @@ public class SnekoMovement : MonoBehaviour
     {
         if (tempHealth <= 0)
         {
-            sneko.SetActive(false);
             WinScreenPanel.SetActive(true);
+            sneko.SetActive(false);
+            
         }
 
 

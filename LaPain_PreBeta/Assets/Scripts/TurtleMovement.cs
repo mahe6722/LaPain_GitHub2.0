@@ -25,6 +25,8 @@ public class TurtleMovement : MonoBehaviour {
 
     ManagerEnemy managerEnemy;
 
+    Rigidbody2D rigidBody;
+
     public int laneID;
 
     // Use this for initialization
@@ -96,15 +98,15 @@ public class TurtleMovement : MonoBehaviour {
 
     void MainMovement()
     {
-        if (transform.position.y >= topBorder) {
-            direction = -1;
-        } else if (transform.position.y <= botBorder) {
-            direction = 1;
-        } else {
-            //Use Sinus Curve to Shift the direction of the Enemies with the offset of unitID
-            direction = Mathf.Sin((Time.time + unitID) * frequency);
+        if (transform.position.y >= topBorder || transform.position.y <= botBorder) {
+            transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, botBorder, topBorder));
+           
         }
+        //Use Sinus Curve to Shift the direction of the Enemies with the offset of unitID
+        direction = Mathf.Sin((Time.time + unitID) * frequency);
+        
 
+        
         transform.Translate(0, 0.5f * turtleSpeed * direction * Time.deltaTime, 0);
     }
 }

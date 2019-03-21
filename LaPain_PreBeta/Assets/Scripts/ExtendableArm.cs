@@ -14,6 +14,7 @@ public class ExtendableArm : MonoBehaviour
     GameObject carrot;
     GameObject sneko;
     GameObject player;
+    GameObject gloveParticles;
 
     private int borderReset;
 
@@ -31,6 +32,8 @@ public class ExtendableArm : MonoBehaviour
     {
         player = GameObject.Find("Player");
         sneko = GameObject.Find("Sneko");
+        gloveParticles = GameObject.Find("GloveParticleEngine");
+        gloveParticles.SetActive(false);
 
         if (sneko != null)
         {
@@ -49,6 +52,7 @@ public class ExtendableArm : MonoBehaviour
     {
         if (extending && gameObject.transform.position.x < armReach)
         {
+            gloveParticles.SetActive(true);
             gameObject.transform.Translate(Vector2.right * speed * Time.deltaTime);
             RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance);
             if (hitInfo.collider != null)
@@ -93,8 +97,9 @@ public class ExtendableArm : MonoBehaviour
 
         if (returning)
         {
+            gloveParticles.SetActive(false);
             gameObject.transform.Translate(Vector2.left * speed * Time.deltaTime);
-            if (Vector2.Distance(gameObject.transform.position, origArmLocation) < 0.3)
+            if (Vector2.Distance(gameObject.transform.position, origArmLocation) < 0.6)
             {
 
 
