@@ -2638,7 +2638,7 @@ MonoBehaviour:
   currentSpeed: 0
   direction: -1
   retreating: 0
-  stageCounter: 3
+  stageCounter: 1
   numberOfStages: 4
   leftBorder: 2
   rightBorder: 10
