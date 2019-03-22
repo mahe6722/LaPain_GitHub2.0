@@ -333,6 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 251109784}
   - component: {fileID: 251109782}
+  - component: {fileID: 251109783}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -351,6 +352,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3696680ffed2fc4b9d5f1495b16966b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &251109783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251109781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a783580c9231c44a680617ef037728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winScreenPanel: {fileID: 1866638175}
+  winScreenText: {fileID: 593307547}
+  winState: 0
+  gameOverState: 0
+  sneko: {fileID: 2063925783}
+  player: {fileID: 1162130361}
+  pauseCanvas: {fileID: 1292242694}
 --- !u!4 &251109784
 Transform:
   m_ObjectHideFlags: 0
@@ -844,6 +863,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 398535c84742a514c88362f7462503c0, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &593307547 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114458065354526380, guid: dcd36508bf80ede4dabf521bb7460f36,
+    type: 2}
+  m_PrefabInternal: {fileID: 2029354960}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &656243177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,6 +1193,20 @@ Prefab:
     - target: {fileID: 4796191380189198, guid: f629f0dcb1000174b9f709cd30b43bc9, type: 2}
       propertyPath: m_LocalPosition.y
       value: 3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 212117168995978292, guid: f629f0dcb1000174b9f709cd30b43bc9,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d04a85c4bfa113a41ba153439fb25854,
+        type: 3}
+    - target: {fileID: 4993759181611284, guid: f629f0dcb1000174b9f709cd30b43bc9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993759181611284, guid: f629f0dcb1000174b9f709cd30b43bc9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f629f0dcb1000174b9f709cd30b43bc9, type: 2}
@@ -1632,6 +1671,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1153641816}
   m_CullTransparentMesh: 0
+--- !u!1 &1162130361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1337457226891404, guid: f629f0dcb1000174b9f709cd30b43bc9,
+    type: 2}
+  m_PrefabInternal: {fileID: 860443151}
 --- !u!1 &1172567290
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,6 +2062,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1292242694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1926547407003630, guid: 1b35f0859e3a53c4c867308493d3080d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1259519097}
 --- !u!114 &1348452832 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114017271071959668, guid: 398535c84742a514c88362f7462503c0,
@@ -2451,31 +2500,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1650136452}
   m_CullTransparentMesh: 0
---- !u!1 &1854076869 stripped
+--- !u!1 &1866638175 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1209354815524732, guid: 029bdfae36eeed644b173a20c2c2fbf0,
+  m_CorrespondingSourceObject: {fileID: 1950236803735354, guid: dcd36508bf80ede4dabf521bb7460f36,
     type: 2}
-  m_PrefabInternal: {fileID: 828964637}
---- !u!50 &1854076876
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1854076869}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_PrefabInternal: {fileID: 2029354960}
 --- !u!1001 &2029354960
 Prefab:
   m_ObjectHideFlags: 0
@@ -2573,10 +2602,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1950236803735354, guid: dcd36508bf80ede4dabf521bb7460f36, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcd36508bf80ede4dabf521bb7460f36, type: 2}
   m_IsPrefabAsset: 0
@@ -2608,14 +2633,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bef430c7fe92ea4695610de4317eb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinScreenPanel: {fileID: 1950236803735354, guid: dcd36508bf80ede4dabf521bb7460f36,
-    type: 2}
   snekoSpeed: 0.5
   retreatSpeed: 4
   currentSpeed: 0
   direction: -1
   retreating: 0
-  stageCounter: 1
+  stageCounter: 3
   numberOfStages: 4
   leftBorder: 2
   rightBorder: 10
