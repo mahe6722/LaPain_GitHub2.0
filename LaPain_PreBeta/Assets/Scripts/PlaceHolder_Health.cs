@@ -35,6 +35,7 @@ public class PlaceHolder_Health : MonoBehaviour {
     private float flashTimer;
     private float flashDuration = 0.3f;
 
+    public float lastStandchance;
 
     void Awake () {
         currentHealth = startingHealth;
@@ -113,21 +114,19 @@ public class PlaceHolder_Health : MonoBehaviour {
     {
         takesDamage = true;
 
+        lastStandchance = Random.Range(0f, 10f);
+        print(lastStandchance);
+
         AudioSource sound = gameObject.GetComponent<AudioSource>();
         sound.Play();
 
+        //Syncs Enrage Image
         if (currentHealth > 25) {
         currentHealth -= amount;
         }
 
-        actualHealth -= amount;
-        
-        if (actualHealth > 25) {
-       // healthSlider.value = currentHealth;
-        }
-        else {
-           // healthSlider.value = actualHealth;
-        }
+        //Last Stand Passive, Controls amount of damage taken!!
+        LastStand();
 
         if(actualHealth <= 0 && !isDead) 
         {
@@ -137,6 +136,17 @@ public class PlaceHolder_Health : MonoBehaviour {
             //Call the Function that takes care of the Death of the Player
             Death();
             
+        }
+    }
+
+    void LastStand()
+    {
+        if (actualHealth <= 50 && lastStandchance > 5.6) {
+            actualHealth -= 50;
+        } else if (actualHealth <= 50 && lastStandchance > 5.6) {
+            return;
+        } else if (actualHealth > 50) {
+            actualHealth -= 25;
         }
     }
 
