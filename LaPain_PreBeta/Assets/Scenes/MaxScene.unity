@@ -122,11 +122,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4658833182640288, guid: b7e8c4e09ce29924da48d0e8b21e2375, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.76
+      value: -7.85
       objectReference: {fileID: 0}
     - target: {fileID: 4658833182640288, guid: b7e8c4e09ce29924da48d0e8b21e2375, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.77
+      value: -3.06
       objectReference: {fileID: 0}
     - target: {fileID: 4658833182640288, guid: b7e8c4e09ce29924da48d0e8b21e2375, type: 2}
       propertyPath: m_LocalPosition.z
@@ -191,7 +191,15 @@ Prefab:
     - target: {fileID: 212139362358018964, guid: b7e8c4e09ce29924da48d0e8b21e2375,
         type: 2}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658833182640288, guid: b7e8c4e09ce29924da48d0e8b21e2375, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658833182640288, guid: b7e8c4e09ce29924da48d0e8b21e2375, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 60451630179981150, guid: b7e8c4e09ce29924da48d0e8b21e2375, type: 2}
@@ -567,8 +575,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 383390164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8, y: -1.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.78, y: -2.24, z: 0}
+  m_LocalScale: {x: 1.8524024, y: 1.2666, z: 1.2666}
   m_Children: []
   m_Father: {fileID: 560343866}
   m_RootOrder: 0
@@ -639,7 +647,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 560343865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6, y: -1.6, z: 0}
+  m_LocalPosition: {x: 6.34, y: -0.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 383390165}
@@ -2615,6 +2623,7 @@ GameObject:
   - component: {fileID: 2063925786}
   - component: {fileID: 2063925785}
   - component: {fileID: 2063925784}
+  - component: {fileID: 2063925787}
   m_Layer: 9
   m_Name: Sneko
   m_TagString: Untagged
@@ -2633,6 +2642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bef430c7fe92ea4695610de4317eb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator_Sneko: {fileID: 2063925787}
+  snekoSprite: {fileID: 2063925785}
   snekoSpeed: 0.5
   retreatSpeed: 4
   currentSpeed: 0
@@ -2681,7 +2692,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: be2c7b51f914f8840b79f9ed6350a6ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a519590a8d095304789d00ec2ae3c232, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2699,14 +2710,32 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2063925783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0.8, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalPosition: {x: 6.86, y: -0.19, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 560343866}
   - {fileID: 1228984751}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2063925787
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2063925783}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5c0e598ee69bbb7458349d305b256064, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2125890227
 GameObject:
   m_ObjectHideFlags: 0

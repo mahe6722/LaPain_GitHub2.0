@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class SnekoMovement : MonoBehaviour
 {
-    
+    public Animator animator_Sneko;
+    public SpriteRenderer snekoSprite;
 
     GameObject sneko;
 
@@ -83,6 +84,8 @@ public class SnekoMovement : MonoBehaviour
                 retreatSpeed = 0;
             }
             snekoHead.SetActive(true);
+            animator_Sneko.SetBool("BossFight", true);
+            snekoSprite.flipX = true;
         }
     }
 
