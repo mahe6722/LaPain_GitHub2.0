@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114772070267041242}
   - component: {fileID: 58179513721592138}
   - component: {fileID: 82572257190641138}
+  - component: {fileID: 122282363291318958}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -171,6 +172,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   playerDamage: 30
+--- !u!122 &122282363291318958
+Halo:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1109359350446872}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 0.2
 --- !u!212 &212904689748938072
 SpriteRenderer:
   m_ObjectHideFlags: 1

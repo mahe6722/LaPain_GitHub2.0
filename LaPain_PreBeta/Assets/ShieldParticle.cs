@@ -12,7 +12,7 @@ public class ShieldParticle : MonoBehaviour {
         // If anything with tag laserbeam hits shield Particleeffect Plays
         if (other.tag == "laserBeam")
         {
-            GameObject effectIns = (GameObject)Instantiate(ImpactEffect, transform.position, transform.rotation);
+            GameObject effectIns = (GameObject)Instantiate(ImpactEffect, other.transform.position, other.transform.rotation);
         }
     }
 }

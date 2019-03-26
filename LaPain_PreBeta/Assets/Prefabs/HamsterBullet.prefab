@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114247786729703088}
   - component: {fileID: 58026653041323966}
   - component: {fileID: 50104593801267984}
+  - component: {fileID: 122146938358725382}
   m_Layer: 0
   m_Name: HamsterBullet
   m_TagString: laserBeam
@@ -40,7 +41,7 @@ Transform:
   m_GameObject: {fileID: 1246583559057092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.0923848, y: -1.2766954, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -115,6 +116,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 0.75
+--- !u!122 &122146938358725382
+Halo:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1246583559057092}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278255469
+  m_Size: 0.2
 --- !u!212 &212522198794391380
 SpriteRenderer:
   m_ObjectHideFlags: 1
